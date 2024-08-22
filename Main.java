@@ -4,7 +4,6 @@ public class Main{
         ShapeBuilder builder = new ShapeBuilder();
         printShapesMenu();
         builder.creatShape(chooser.getChoice());
-        
     }
 
     private static void printShapesMenu(){

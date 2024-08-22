@@ -1,8 +1,11 @@
 public class TwoDimensionalShape extends Shape{
-    int area;
+    protected double area;
     public TwoDimensionalShape(int dimensions) {
         super(dimensions);
-        //TODO Auto-generated constructor stub
+    }
+
+    public void printAreaMsg(){
+        System.out.println("The area is of this 2D is " + area);
     }
     
 }

@@ -1,6 +1,7 @@
 
 public class Shape{
-    int numDimensions;
+    protected Chooser chooser = new Chooser();
+    protected int numDimensions;
 
     public Shape(int dimensions){
         this.numDimensions = dimensions;
