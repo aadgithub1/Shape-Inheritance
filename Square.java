@@ -6,12 +6,7 @@ public class Square extends TwoDimensionalShape{
         System.out.println("You have chosen a Square\nEnter the side length: ");
         sideLength = chooser.getDoubleChoice();
         area = Math.pow(sideLength, 2);
-        printAreaVolMsg();
-    }
-
-    @Override
-    public void printAreaVolMsg(){
-        System.out.println("The area of the square is " + area);
+        printAreaVolMsg("area", "square", area);
     }
     
 }

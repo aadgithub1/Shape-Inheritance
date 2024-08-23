@@ -10,4 +10,8 @@ public class Shape{
     public void printDimension(){
         System.out.println("The number of dimensions is " + this.numDimensions);
     }
+
+    public void printAreaVolMsg(String areaOrVol, String shape, double rawAreaOrVol) {
+        System.out.println("The " + areaOrVol + " of the " + shape + " is " + Math.round(rawAreaOrVol*100.0)/100.0);
+    }
 }

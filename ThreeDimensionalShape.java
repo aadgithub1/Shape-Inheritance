@@ -1,11 +1,8 @@
-public class ThreeDimensionalShape extends Shape implements AreaOrVolumePrinter{
+public class ThreeDimensionalShape extends Shape{
     protected double volume;
     public ThreeDimensionalShape(int dimensions) {
         super(dimensions);
     }
-    @Override
-    public void printAreaVolMsg() {
-        System.out.println("The volume is " + volume);
-    }
+    
     
 }
