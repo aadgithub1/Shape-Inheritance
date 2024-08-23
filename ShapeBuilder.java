@@ -15,6 +15,14 @@ public class ShapeBuilder {
                 return new Triangle(2);
             case 5:
                 return new Sphere(3);
+            case 6:
+                return new Cube(3);
+            case 7:
+                return new Cone(3);
+            case 8:
+                return new Cylinder(3);
+            case 9:
+                return new Torus(3);
             default:
                 return new Shape(2);
         }

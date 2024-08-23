@@ -5,7 +5,7 @@ public class Sphere extends ThreeDimensionalShape{
         
         System.out.println("You have chosen a Sphere\nEnter the radius: ");
         radius = chooser.getDoubleChoice();
-        volume = (4/3) * Math.PI * Math.pow(radius, 3);
+        volume = (4.0/3) * Math.PI * Math.pow(radius, 3);
         printAreaVolMsg("volume", "sphere", volume);
     }
     
