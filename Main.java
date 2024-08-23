@@ -20,7 +20,7 @@ public class Main{
         System.out.println("*****Welcome to the Java OO Shapes Program*****");
         do{
             printShapesMenu();
-            currentShape = builder.creatShape(chooser.getChoice());
+            currentShape = builder.creatShape(chooser.getIntChoice());
             continueQuestion();
         }   while (currentShape.getDimension() != 0);
     }
@@ -48,7 +48,7 @@ public class Main{
                 System.out.println("in Y block");
                 return;
             } else if (response.equals("N")){
-                currentShape = builder.creatShape("10"); //exits with thank you message
+                currentShape = builder.creatShape(10); //exits with thank you message
                 return;
             } else{
                 System.out.println("Please enter a valid character.");

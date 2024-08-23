@@ -1,3 +1,16 @@
+// ShapeBuilder.java
+// Aug 23 2024
+// Aaron D. Webb
+// ShapeBuilder.java builds shapes.
+// The createShape(String key) method returns
+// a certain shape based on the key value passed in.
+// This method is used in the Main class to return
+// a particular shape based on user input.
+
+//The class also contains a date object which represents the
+// current day and a SimpleDateFormat, which
+// allows the date to be formatted per the assignement
+// requirements.
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -7,8 +20,8 @@ public class ShapeBuilder {
     public ShapeBuilder(){
     }
 
-    public Shape creatShape(String key){
-        switch (Integer.parseInt(key)) {
+    public Shape creatShape(int key){
+        switch (key) {
             case 1:
                 return new Circle(2);
             case 2:

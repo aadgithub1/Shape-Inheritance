@@ -1,3 +1,11 @@
+// Rectangle.java
+// Aug 23 2024
+// Aaron D. Webb
+// Rectangle.java represents a rectangle.
+// It inherits methods and fields from Shape
+// and TwoDimensionalShape. It has its own fields "length"
+// and "width" to hold those respective values.
+
 public class Rectangle extends TwoDimensionalShape{
     double length;
     double width;
