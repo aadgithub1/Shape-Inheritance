@@ -3,7 +3,4 @@ public class TwoDimensionalShape extends Shape{
     public TwoDimensionalShape(int dimensions) {
         super(dimensions);
     }
-
-    
-    
 }

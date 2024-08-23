@@ -12,5 +12,4 @@ public class Torus extends ThreeDimensionalShape{
         printAreaVolMsg("volume", "torus", volume);
 
     }
-    
 }

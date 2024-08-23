@@ -1,5 +1,9 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ShapeBuilder {
+    Date date = new Date();
+    SimpleDateFormat formatter = new SimpleDateFormat("MMM d 'at' h:mm a");
     public ShapeBuilder(){
     }
 
@@ -23,6 +27,8 @@ public class ShapeBuilder {
                 return new Cylinder(3);
             case 9:
                 return new Torus(3);
+            case 10:
+                System.out.println("Thanks for using the program. Today is " + formatter.format(date) + "."); //+ date);
             default:
                 return new Shape(2);
         }

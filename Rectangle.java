@@ -11,5 +11,4 @@ public class Rectangle extends TwoDimensionalShape{
         area = length * width;
         printAreaVolMsg("area", "rectangle", area);
     }
-    
 }

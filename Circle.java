@@ -7,8 +7,5 @@ public class Circle extends TwoDimensionalShape {
         radius = chooser.getDoubleChoice();
         area = Math.PI * Math.pow(radius, 2);
         printAreaVolMsg("area", "circle", area);
-    }
-
-
-    
+    }    
 }

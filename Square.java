@@ -8,5 +8,4 @@ public class Square extends TwoDimensionalShape{
         area = Math.pow(sideLength, 2);
         printAreaVolMsg("area", "square", area);
     }
-    
 }

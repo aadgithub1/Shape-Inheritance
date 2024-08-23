@@ -8,5 +8,4 @@ public class Cube extends ThreeDimensionalShape{
         volume = Math.pow(sideLength, 3);
         printAreaVolMsg("volume", "cube", volume);
     }
-    
 }
