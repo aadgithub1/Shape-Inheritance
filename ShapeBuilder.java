@@ -28,7 +28,8 @@ public class ShapeBuilder {
             case 9:
                 return new Torus(3);
             case 10:
-                System.out.println("Thanks for using the program. Today is " + formatter.format(date) + "."); //+ date);
+                System.out.println("Thanks for using the program. Today is " + formatter.format(date) + ".");
+                return new Shape(0);
             default:
                 return new Shape(2);
         }
