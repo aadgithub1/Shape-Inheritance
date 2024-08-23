@@ -7,6 +7,8 @@ public class ShapeBuilder {
         switch (Integer.parseInt(key)) {
             case 1:
                 return new Circle(2);
+            case 3:
+                return new Square(2);
             default:
                 return new Shape(2);
         }
