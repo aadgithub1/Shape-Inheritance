@@ -23,6 +23,9 @@ public class Main{
             currentShape = builder.creatShape(chooser.getIntChoice());
             if (currentShape.getDimension() == 0){
                 break;
+            } else if (currentShape.getDimension() == 1) {
+                System.out.println("Please enter a number listed on the menu.");
+                continue;
             }
             continueQuestion();
         }   while (true && currentShape.getDimension() != 0);

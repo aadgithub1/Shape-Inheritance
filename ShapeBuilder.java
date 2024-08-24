@@ -44,7 +44,7 @@ public class ShapeBuilder {
                 printThankYouMsg();
                 return new Shape(0);
             default:
-                return new Shape(2);
+                return new Shape(1);
         }
     }
 
