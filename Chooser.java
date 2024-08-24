@@ -23,7 +23,13 @@ public class Chooser {
     public int getIntChoice(){
         while (true){
             try{
-                return Integer.parseInt(in.nextLine());
+                int returnVal = Integer.parseInt(in.nextLine());
+                if (returnVal < 0){
+                    System.out.println("Please enter only positive integers.");
+                    continue;
+                } else{
+                    return returnVal;
+                }
             } catch (NumberFormatException e){
                 System.out.println("Invalid input: Please enter integers only.");
             }
@@ -33,7 +39,13 @@ public class Chooser {
     public double getDoubleChoice(){
         while (true){
             try{
-                return Double.parseDouble(in.nextLine());
+                double returnVal = Double.parseDouble(in.nextLine());
+                if (returnVal < 0){
+                    System.out.println("Please enter only positive double or integer values.");
+                    continue;
+                } else{
+                    return returnVal;
+                }
             } catch (NumberFormatException e){
                 System.out.println("Invalid input: Please enter double/decimal values or integers only.");
             }

@@ -25,7 +25,7 @@ public class Main{
                 break;
             }
             continueQuestion();
-        }   while (true);
+        }   while (true && currentShape.getDimension() != 0);
     }
 
     private static void printShapesMenu(){
