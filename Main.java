@@ -21,8 +21,11 @@ public class Main{
         do{
             printShapesMenu();
             currentShape = builder.creatShape(chooser.getIntChoice());
+            if (currentShape.getDimension() == 0){
+                break;
+            }
             continueQuestion();
-        }   while (currentShape.getDimension() != 0);
+        }   while (true);
     }
 
     private static void printShapesMenu(){
@@ -45,7 +48,6 @@ public class Main{
             String response = chooser.getChoice().toUpperCase();
 
             if (response.equals("Y")){
-                System.out.println("in Y block");
                 return;
             } else if (response.equals("N")){
                 currentShape = builder.creatShape(10); //exits with thank you message
