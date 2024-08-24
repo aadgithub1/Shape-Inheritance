@@ -23,7 +23,7 @@ public class Main{
             currentShape = builder.creatShape(chooser.getIntChoice());
             if (currentShape.getDimension() == 0){
                 break;
-            } else if (currentShape.getDimension() == 1) {
+            } else if (currentShape.getDimension() == 1) {//Shape with 1 dimension is default case
                 System.out.println("Please enter a number listed on the menu.");
                 continue;
             }
