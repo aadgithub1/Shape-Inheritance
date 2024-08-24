@@ -25,7 +25,7 @@ public class Chooser {
             try{
                 return Integer.parseInt(in.nextLine());
             } catch (NumberFormatException e){
-                System.out.println("ERROR\nPlease input correct data type.");
+                System.out.println("Invalid input: Please enter integers only.");
             }
         }
     }
@@ -35,7 +35,7 @@ public class Chooser {
             try{
                 return Double.parseDouble(in.nextLine());
             } catch (NumberFormatException e){
-                System.out.println("ERROR\nPlease input correct data type.");
+                System.out.println("Invalid input: Please enter double/decimal values or integers only.");
             }
         }
     }
