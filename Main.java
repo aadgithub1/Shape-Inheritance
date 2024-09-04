@@ -17,47 +17,8 @@ public class Main{
     static ShapeBuilder builder = new ShapeBuilder();
     static Shape currentShape = new Shape(2);
     public static void main(String[] args) {
-        System.out.println("*****Welcome to the Java OO Shapes Program*****");
-        do{
-            printShapesMenu();
-            currentShape = builder.creatShape(chooser.getIntChoice());
-            if (currentShape.getDimension() == 0){
-                break;
-            } else if (currentShape.getDimension() == 1) {//Shape with 1 dimension is default case
-                System.out.println("Please enter a number listed on the menu.");
-                continue;
-            }
-            continueQuestion();
-        }   while (true && currentShape.getDimension() != 0);
+        Frame gui = new Frame();
     }
 
-    private static void printShapesMenu(){
-        System.out.println("Select from the menu below:");
-        System.out.println("1. Construct a Circle");
-        System.out.println("2. Construct a Rectangle");
-        System.out.println("3. Construct a Square");
-        System.out.println("4. Construct a Triangle");
-        System.out.println("5. Construct a Sphere");
-        System.out.println("6. Construct a Cube");
-        System.out.println("7. Construct a Cone");
-        System.out.println("8. Construct a Cylinder");
-        System.out.println("9. Construct a Torus");
-        System.out.println("10. Exit");
-    }
-
-    private static void continueQuestion(){
-        while (true){
-            System.out.println("Would you like to continue? (Y/N)");
-            String response = chooser.getChoice().toUpperCase();
-
-            if (response.equals("Y")){
-                return;
-            } else if (response.equals("N")){
-                currentShape = builder.creatShape(10); //exits with thank you message
-                return;
-            } else{
-                System.out.println("Please enter a valid character.");
-            }
-        }
-    }
+    
 }
