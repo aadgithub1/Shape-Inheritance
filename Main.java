@@ -17,8 +17,6 @@ public class Main{
     static ShapeBuilder builder = new ShapeBuilder();
     static Shape currentShape = new Shape(2);
     public static void main(String[] args) {
-        Frame gui = new Frame();
+        MenuFrame gui = new MenuFrame();
     }
-
-    
 }
