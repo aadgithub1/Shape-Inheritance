@@ -17,6 +17,7 @@ public class Main{
     static ShapeBuilder builder = new ShapeBuilder();
     static Shape currentShape = new Shape(2);
     public static void main(String[] args) {
+        @SuppressWarnings("unused")
         MenuFrame gui = new MenuFrame();
     }
 }

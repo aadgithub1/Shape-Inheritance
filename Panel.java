@@ -1,11 +1,14 @@
 import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
 
-public class Panel extends JPanel implements ActionListener{
+public class Panel extends JPanel{
     ImageIcon image;
     JLabel label;
+    String shapeName;
+    String filePath;
     public Panel(String shapeName, String filePath){
+        this.shapeName = shapeName;
+        this.filePath = filePath;
         setPreferredSize(new Dimension(200, 200));
         image = new ImageIcon(filePath);
         label = new JLabel();
@@ -15,8 +18,5 @@ public class Panel extends JPanel implements ActionListener{
         label.setHorizontalTextPosition(JLabel.CENTER);
         label.setVerticalTextPosition(JLabel.BOTTOM);
         add(label);
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) {
     }
 }

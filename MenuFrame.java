@@ -4,9 +4,12 @@ import java.awt.Dimension;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MenuFrame extends JFrame implements ActionListener{
+public class MenuFrame extends JFrame{
+
+    CirclePanel circlePanel;
+
     Panel[] shapePanels = {
-        new CirclePanel("Circle", "resources/circle.png"), 
+        new CirclePanel("Circle", "resources/circle.png"),
         new RectanglePanel("Rectangle", "resources/rectangle.png"),
         new SquarePanel("Square", "resources/square.png"),
         new TrianglePanel("Triangle", "resources/triangle.png"),
@@ -14,7 +17,8 @@ public class MenuFrame extends JFrame implements ActionListener{
         new CubePanel("Cube", "resources/cube.png"),
         new CylinderPanel("Cylinder", "resources/cylinder.png"),
         new SpherePanel("Sphere", "resources/sphere.png"),
-        new TorusPanel("Torus", "resources/torus.png")};
+        new TorusPanel("Torus", "resources/torus.png")
+    };
 
     public MenuFrame(){
         super("Choose a shape to draw!");
@@ -23,15 +27,16 @@ public class MenuFrame extends JFrame implements ActionListener{
 
         for (Panel panel : shapePanels){
             add(panel);
+            panel.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e){
+                    System.out.println(panel.shapeName + " damn");
+                }
+            });
         }
+        
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-    }
-
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-            
     }
 }
