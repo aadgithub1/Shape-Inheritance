@@ -5,8 +5,16 @@ import java.awt.*;
 public class Panel extends JPanel implements ActionListener{
     ImageIcon image;
     JLabel label;
-    public Panel(){
+    public Panel(String shapeName, String fileName){
         setPreferredSize(new Dimension(200, 200));
+        image = new ImageIcon(fileName);
+        label = new JLabel();
+
+        label.setIcon(image);
+        label.setText(shapeName);
+        label.setHorizontalTextPosition(JLabel.CENTER);
+        label.setVerticalTextPosition(JLabel.BOTTOM);
+        add(label);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
