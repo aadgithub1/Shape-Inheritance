@@ -5,14 +5,19 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class MenuFrame extends JFrame implements ActionListener{
-    CirclePanel circlePanel = new CirclePanel("Circle", "circle.png");
-    RectanglePanel rectanglePanel = new RectanglePanel("Rectangle", "rectangle.png");
+    Panel[] shapePanels = {
+        new CirclePanel("Circle", "resources/circle.png"), 
+        new RectanglePanel("Rectangle", "resources/rectangle.png"),
+        new SquarePanel("Square", "resources/square.png"),
+        new TrianglePanel("Triangle", "resources/triangle.png")};
 
     public MenuFrame(){
         setPreferredSize(new Dimension(600, 600));
         setLayout(new GridLayout(3,3));
-        add(circlePanel);
-        add(rectanglePanel);
+
+        for (Panel panel : shapePanels){
+            add(panel);
+        }
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

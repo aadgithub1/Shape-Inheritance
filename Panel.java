@@ -5,9 +5,9 @@ import java.awt.*;
 public class Panel extends JPanel implements ActionListener{
     ImageIcon image;
     JLabel label;
-    public Panel(String shapeName, String fileName){
+    public Panel(String shapeName, String filePath){
         setPreferredSize(new Dimension(200, 200));
-        image = new ImageIcon(fileName);
+        image = new ImageIcon(filePath);
         label = new JLabel();
 
         label.setIcon(image);
