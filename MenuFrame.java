@@ -5,9 +5,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class MenuFrame extends JFrame{
-
+    Graphics2D g;
     CirclePanel circlePanel;
-
     Panel[] shapePanels = {
         new CirclePanel("Circle", "resources/circle.png"),
         new RectanglePanel("Rectangle", "resources/rectangle.png"),
@@ -25,16 +24,23 @@ public class MenuFrame extends JFrame{
         setPreferredSize(new Dimension(600, 600));
         setLayout(new GridLayout(3,3));
 
+        //TO-DO:
+        // Change stroke weight
+
+
         for (Panel panel : shapePanels){
             add(panel);
             panel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e){
-                    System.out.println(panel.shapeName + " damn");
+                    if (panel.shapeName == "Square"){
+                        new Square(2).paint(g);
+                    } else if (panel.shapeName == "Circle"){
+                        new Circle(2).paint(g);
+                    }
                 }
             });
         }
-        
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);

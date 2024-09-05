@@ -13,12 +13,21 @@
 // takes in characteristics as parameters and displays 
 // information about them. This method also formats output
 // to be rounded to 2 decimal places.
-public class Shape{
+
+import java.awt.Dimension;
+
+import javax.swing.*;
+
+public class Shape extends JFrame{
     protected Chooser chooser = new Chooser();
     protected int numDimensions;
 
     public Shape(int dimensions){
         this.numDimensions = dimensions;
+        setPreferredSize(new Dimension(600, 600));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setVisible(true);
     }
 
     public void printDimension(){
