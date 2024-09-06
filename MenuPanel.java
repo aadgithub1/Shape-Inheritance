@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MenuFrame extends JFrame{
+public class MenuPanel extends JPanel{
     Graphics2D g;
     ShapePanel[] shapePanels = {
         new CirclePanel("Circle", "resources/circle.png"),
@@ -17,8 +17,7 @@ public class MenuFrame extends JFrame{
         new TorusPanel("Torus", "resources/torus.png")
     };
 
-    public MenuFrame(){
-        super("Choose a shape to draw!");
+    public MenuPanel(){
         setPreferredSize(new Dimension(600, 600));
         setLayout(new GridLayout(3,3));
 
@@ -55,8 +54,5 @@ public class MenuFrame extends JFrame{
                 }
             });
         }
-        pack();
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
     }
 }
