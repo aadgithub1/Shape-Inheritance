@@ -10,12 +10,5 @@ public class Cylinder extends ThreeDimensionalShape{
     double height;
     public Cylinder(int dimensions, String imagePath) {
         super(dimensions, imagePath);
-
-        // System.out.println("You have chosen a Cylinder\nEnter the radius: ");
-        // radius = chooser.getDoubleChoice();
-        // System.out.println("Enter the height: ");
-        // height = chooser.getDoubleChoice();
-        // volume  = Math.PI * Math.pow(radius, 2) * height;
-        // printAreaVolMsg("volume", "cylinder", volume);
     }
 }

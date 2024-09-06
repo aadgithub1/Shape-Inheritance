@@ -1,12 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel extends JPanel{
+public class ShapePanel extends JPanel{
     ImageIcon image;
     JLabel label;
     String shapeName;
     String filePath;
-    public Panel(String shapeName, String filePath){
+    public ShapePanel(String shapeName, String filePath){
         this.shapeName = shapeName;
         this.filePath = filePath;
         setPreferredSize(new Dimension(200, 200));

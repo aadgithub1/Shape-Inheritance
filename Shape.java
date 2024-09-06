@@ -15,10 +15,13 @@
 // to be rounded to 2 decimal places.
 
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Shape extends JFrame{
+public class Shape extends JFrame implements ActionListener{
     protected Chooser chooser = new Chooser();
     protected int numDimensions;
 
@@ -40,6 +43,11 @@ public class Shape extends JFrame{
 
     }
 
+    public void add(Object obj){
+        this.add(obj);
+        this.setLayout(new FlowLayout());
+    }
+
     public void printDimension(){
         System.out.println("The number of dimensions is " + this.numDimensions);
     }
@@ -50,5 +58,9 @@ public class Shape extends JFrame{
     //takes in characteristics of a shape and prints context msg
     public void printAreaVolMsg(String areaOrVol, String shape, double rawAreaOrVol) {
         System.out.println("The " + areaOrVol + " of the " + shape + " is " + Math.round(rawAreaOrVol*100.0)/100.0);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
     }
 }

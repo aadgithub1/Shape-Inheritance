@@ -1,12 +1,11 @@
 import javax.swing.*;
 
-import java.awt.Dimension;
 import java.awt.*;
 import java.awt.event.*;
 
 public class MenuFrame extends JFrame{
     Graphics2D g;
-    Panel[] shapePanels = {
+    ShapePanel[] shapePanels = {
         new CirclePanel("Circle", "resources/circle.png"),
         new RectanglePanel("Rectangle", "resources/rectangle.png"),
         new SquarePanel("Square", "resources/square.png"),
@@ -29,7 +28,7 @@ public class MenuFrame extends JFrame{
         // Render new JFrame using the shape classes
 
 
-        for (Panel panel : shapePanels){
+        for (ShapePanel panel : shapePanels){
             add(panel);
             panel.addMouseListener(new MouseAdapter() {
                 @Override

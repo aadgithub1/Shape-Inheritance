@@ -6,21 +6,23 @@
 // and TwoDimensionalShape. It has its own field "radius"
 // to hold its radius value.
 
+//add a combobox and prompt in the 2D constructor then pass those values to the 
+
 import java.awt.*;
-public class Circle extends TwoDimensionalShape {
-    private double radius;
+
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+public class Circle extends TwoDimensionalShape{
+    private int radius;
+    Integer[] choices = {25, 50, 100, 150, 200, 300};
+    JComboBox<Integer> comboBox;
+    JFrame frame;
+
     public Circle(int dimensions) {
         super(dimensions);
-
-        // System.out.println("You have selected a Circle.\nEnter the radius of the circle: ");
-        // radius = chooser.getDoubleChoice();
-        // area = Math.PI * Math.pow(radius, 2);
-        // printAreaVolMsg("area", "circle", area);
-        //(above) uses inherited method to print output using
-        //current class characteristics
     }
 
     public void paint(Graphics g){
-        g.drawArc(250, 250, 100, 100, 0, 360);
+        g.drawArc(250, 250, radius, radius, 0, 360);
     }
 }

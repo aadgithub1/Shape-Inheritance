@@ -9,10 +9,6 @@ public class Sphere extends ThreeDimensionalShape{
     double radius;
     public Sphere(int dimensions, String imagePath) {
         super(dimensions, imagePath);
-        
-        // System.out.println("You have chosen a Sphere\nEnter the radius: ");
-        // radius = chooser.getDoubleChoice();
-        // volume = (4.0/3) * Math.PI * Math.pow(radius, 3);
-        // printAreaVolMsg("volume", "sphere", volume);
+
     }
 }
