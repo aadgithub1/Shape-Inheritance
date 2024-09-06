@@ -38,24 +38,23 @@ public class MenuPanel extends JPanel{
 
                     if (panel.shapeName == "Circle"){
                         new Circle(2);
+                    } else if (panel.shapeName == "Rectangle"){
+                        new Rectangle(2).paint(g);
+                    } else if (panel.shapeName == "Square"){
+                        new Square(2).paint(g);
+                    } else if (panel.shapeName == "Triangle"){
+                        new Triangle(2).paint(g);
+                    } else if (panel.shapeName == "Cone"){
+                        new Cone(3);
+                    } else if (panel.shapeName == "Cube"){
+                        new Cube(3);
+                    } else if (panel.shapeName == "Cylinder"){
+                        new Cylinder(3);
+                    } else if (panel.shapeName == "Sphere"){
+                        new Sphere(3);
+                    } else if (panel.shapeName == "Torus"){
+                        new Torus(3);
                     }
-                    // } else if (panel.shapeName == "Rectangle"){
-                    //     new Rectangle(2).paint(g);
-                    // } else if (panel.shapeName == "Square"){
-                    //     new Square(2).paint(g);
-                    // } else if (panel.shapeName == "Triangle"){
-                    //     new Triangle(2).paint(g);
-                    // } else if (panel.shapeName == "Cone"){
-                    //     new Cone(3, "resources/cone.png");
-                    // } else if (panel.shapeName == "Cube"){
-                    //     new Cube(3, "resources/cube.png");
-                    // } else if (panel.shapeName == "Cylinder"){
-                    //     new Cylinder(3, "resources/cylinder.png");
-                    // } else if (panel.shapeName == "Sphere"){
-                    //     new Sphere(3, "resources/sphere.png");
-                    // } else if (panel.shapeName == "Torus"){
-                    //     new Torus(3, "resources/torus.png");
-                    // }
                 }
             });
         }

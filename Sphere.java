@@ -7,8 +7,8 @@
 // which holds its radius value.
 public class Sphere extends ThreeDimensionalShape{
     double radius;
-    public Sphere(int dimensions, String imagePath) {
-        super(dimensions, imagePath);
+    public Sphere(int dimensions) {
+        super(dimensions);
 
     }
 }

@@ -8,8 +8,8 @@
 public class Torus extends ThreeDimensionalShape{
     double majorRadius;
     double crossRadius;
-    public Torus(int dimensions, String imagePath) {
-        super(dimensions, imagePath);
+    public Torus(int dimensions) {
+        super(dimensions);
 
     }
 }

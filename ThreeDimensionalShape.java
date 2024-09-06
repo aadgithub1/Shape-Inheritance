@@ -11,8 +11,8 @@ import javax.swing.JLabel;
 
 public class ThreeDimensionalShape extends Shape{
     protected double volume;
-    public ThreeDimensionalShape(int dimensions, String imagePath) {
-        super(dimensions, display(imagePath));
+    public ThreeDimensionalShape(int dimensions) {
+        super(dimensions);
     }
 
     public static JLabel display(String imagePath){

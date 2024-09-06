@@ -32,13 +32,7 @@ public class Circle extends TwoDimensionalShape{
         frame.add(comboBox);
         frame.setVisible(true);
 
-        radius = (int)comboBox.getSelectedItem();
-        System.out.println(radius);
     }
-
-    // public void paint(Graphics g){
-    //     g.drawArc(250, 250, radius, radius, 0, 360);
-    // }
 
     public void actionPerformed(ActionEvent e){
         radius = (int)comboBox.getSelectedItem();
@@ -48,21 +42,13 @@ public class Circle extends TwoDimensionalShape{
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(650, 650);
 
-            // Load the image as an ImageIcon
             ImageIcon originalIcon = new ImageIcon("resources/circle.png");
 
-            // Resize the ImageIcon to a new size (e.g., 100x100)
             Image originalImage = originalIcon.getImage();
             Image resizedImage = originalImage.getScaledInstance(radius, radius, Image.SCALE_SMOOTH);  // Use smooth scaling
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
-
-            // Create a JLabel with the resized ImageIcon
             JLabel imageLabel = new JLabel(resizedIcon);
-
-            // Add the label to the frame
             frame.add(imageLabel);
-
-            // Make the frame visible
             frame.setVisible(true);
         }
     }
