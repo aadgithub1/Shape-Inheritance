@@ -6,7 +6,6 @@ import java.awt.event.*;
 
 public class MenuFrame extends JFrame{
     Graphics2D g;
-    CirclePanel circlePanel;
     Panel[] shapePanels = {
         new CirclePanel("Circle", "resources/circle.png"),
         new RectanglePanel("Rectangle", "resources/rectangle.png"),
@@ -25,7 +24,9 @@ public class MenuFrame extends JFrame{
         setLayout(new GridLayout(3,3));
 
         //TO-DO:
-        // Change stroke weight
+        // Fix double Frame pop-up
+        // Allow user input (or dropdown) for dimensions
+        // Render new JFrame using the shape classes
 
 
         for (Panel panel : shapePanels){
@@ -33,9 +34,23 @@ public class MenuFrame extends JFrame{
             panel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e){
-                    if (panel.shapeName == "Square"){
+                    if (panel.shapeName == "Circle"){
                         new Square(2).paint(g);
-                    } else if (panel.shapeName == "Circle"){
+                    } else if (panel.shapeName == "Rectangle"){
+                        new Rectangle(2).paint(g);
+                    } else if (panel.shapeName == "Square"){
+                        new Square(2).paint(g);
+                    } else if (panel.shapeName == "Triangle"){
+                        new Triangle(2).paint(g);
+                    } else if (panel.shapeName == "Cone"){
+                        new Circle(2).paint(g);
+                    } else if (panel.shapeName == "Cube"){
+                        new Circle(2).paint(g);
+                    } else if (panel.shapeName == "Cylinder"){
+                        new Circle(2).paint(g);
+                    } else if (panel.shapeName == "Sphere"){
+                        new Circle(2).paint(g);
+                    } else if (panel.shapeName == "Torus"){
                         new Circle(2).paint(g);
                     }
                 }
