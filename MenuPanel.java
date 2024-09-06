@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class MenuPanel extends JPanel{
+    String shapeToDraw;
     Graphics2D g;
     ShapePanel[] shapePanels = {
         new CirclePanel("Circle", "resources/circle.png"),
@@ -18,7 +19,7 @@ public class MenuPanel extends JPanel{
     };
 
     public MenuPanel(){
-        setPreferredSize(new Dimension(600, 600));
+        setSize(new Dimension(600, 600));
         setLayout(new GridLayout(3,3));
 
         //TO-DO:
@@ -32,25 +33,29 @@ public class MenuPanel extends JPanel{
             panel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e){
+
+                    shapeToDraw = panel.shapeName;
+
                     if (panel.shapeName == "Circle"){
-                        new Circle(2).paint(g);
-                    } else if (panel.shapeName == "Rectangle"){
-                        new Rectangle(2).paint(g);
-                    } else if (panel.shapeName == "Square"){
-                        new Square(2).paint(g);
-                    } else if (panel.shapeName == "Triangle"){
-                        new Triangle(2).paint(g);
-                    } else if (panel.shapeName == "Cone"){
-                        new Cone(3, "resources/cone.png");
-                    } else if (panel.shapeName == "Cube"){
-                        new Cube(3, "resources/cube.png");
-                    } else if (panel.shapeName == "Cylinder"){
-                        new Cylinder(3, "resources/cylinder.png");
-                    } else if (panel.shapeName == "Sphere"){
-                        new Sphere(3, "resources/sphere.png");
-                    } else if (panel.shapeName == "Torus"){
-                        new Torus(3, "resources/torus.png");
+                        new Circle(2);
                     }
+                    // } else if (panel.shapeName == "Rectangle"){
+                    //     new Rectangle(2).paint(g);
+                    // } else if (panel.shapeName == "Square"){
+                    //     new Square(2).paint(g);
+                    // } else if (panel.shapeName == "Triangle"){
+                    //     new Triangle(2).paint(g);
+                    // } else if (panel.shapeName == "Cone"){
+                    //     new Cone(3, "resources/cone.png");
+                    // } else if (panel.shapeName == "Cube"){
+                    //     new Cube(3, "resources/cube.png");
+                    // } else if (panel.shapeName == "Cylinder"){
+                    //     new Cylinder(3, "resources/cylinder.png");
+                    // } else if (panel.shapeName == "Sphere"){
+                    //     new Sphere(3, "resources/sphere.png");
+                    // } else if (panel.shapeName == "Torus"){
+                    //     new Torus(3, "resources/torus.png");
+                    // }
                 }
             });
         }

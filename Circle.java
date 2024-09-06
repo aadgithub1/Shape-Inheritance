@@ -9,20 +9,61 @@
 //add a combobox and prompt in the 2D constructor then pass those values to the 
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 public class Circle extends TwoDimensionalShape{
     private int radius;
-    Integer[] choices = {25, 50, 100, 150, 200, 300};
+    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBox;
     JFrame frame;
 
     public Circle(int dimensions) {
         super(dimensions);
+        frame = new JFrame("Enter radius");
+        comboBox = new JComboBox<Integer>(choices);
+        comboBox.addActionListener(this);
+
+        frame.setSize(new Dimension(200, 200));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(comboBox);
+        frame.setVisible(true);
+
+        radius = (int)comboBox.getSelectedItem();
+        System.out.println(radius);
     }
 
-    public void paint(Graphics g){
-        g.drawArc(250, 250, radius, radius, 0, 360);
+    // public void paint(Graphics g){
+    //     g.drawArc(250, 250, radius, radius, 0, 360);
+    // }
+
+    public void actionPerformed(ActionEvent e){
+        radius = (int)comboBox.getSelectedItem();
+        System.out.println(radius);
+        if (radius != 0){
+            JFrame frame = new JFrame("ImageIcon Resize Example");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(650, 650);
+
+            // Load the image as an ImageIcon
+            ImageIcon originalIcon = new ImageIcon("resources/circle.png");
+
+            // Resize the ImageIcon to a new size (e.g., 100x100)
+            Image originalImage = originalIcon.getImage();
+            Image resizedImage = originalImage.getScaledInstance(radius, radius, Image.SCALE_SMOOTH);  // Use smooth scaling
+            ImageIcon resizedIcon = new ImageIcon(resizedImage);
+
+            // Create a JLabel with the resized ImageIcon
+            JLabel imageLabel = new JLabel(resizedIcon);
+
+            // Add the label to the frame
+            frame.add(imageLabel);
+
+            // Make the frame visible
+            frame.setVisible(true);
+        }
     }
 }

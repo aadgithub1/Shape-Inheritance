@@ -12,9 +12,4 @@ public class TwoDimensionalShape extends Shape{
     public TwoDimensionalShape(int dimensions) {
         super(dimensions);
     }
-
-    public void add(Object obj){
-        super.add(obj);
-        
-    }
 }

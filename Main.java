@@ -13,23 +13,8 @@
 // On each successful iteration the ShapeBuilder returns the Shape which the user
 // selected.
 
-import javax.swing.JFrame;
-
 public class Main{
-    MenuPanel menu = new MenuPanel();
-    JFrame frame;
-
-    public Main(){
-        frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(menu);
-        frame.pack();
-        frame.setVisible(true);
-    }
-
-
-
     public static void main(String[] args) {
-        Main main = new Main();
+        Frame frame = new Frame();
     }
 }
