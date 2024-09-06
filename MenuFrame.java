@@ -35,7 +35,7 @@ public class MenuFrame extends JFrame{
                 @Override
                 public void mouseClicked(MouseEvent e){
                     if (panel.shapeName == "Circle"){
-                        new Square(2).paint(g);
+                        new Circle(2).paint(g);
                     } else if (panel.shapeName == "Rectangle"){
                         new Rectangle(2).paint(g);
                     } else if (panel.shapeName == "Square"){
@@ -43,15 +43,15 @@ public class MenuFrame extends JFrame{
                     } else if (panel.shapeName == "Triangle"){
                         new Triangle(2).paint(g);
                     } else if (panel.shapeName == "Cone"){
-                        new Circle(2).paint(g);
+                        new Cone(3, "resources/cone.png");
                     } else if (panel.shapeName == "Cube"){
-                        new Circle(2).paint(g);
+                        new Cube(3, "resources/cube.png");
                     } else if (panel.shapeName == "Cylinder"){
-                        new Circle(2).paint(g);
+                        new Cylinder(3, "resources/cylinder.png");
                     } else if (panel.shapeName == "Sphere"){
-                        new Circle(2).paint(g);
+                        new Sphere(3, "resources/sphere.png");
                     } else if (panel.shapeName == "Torus"){
-                        new Circle(2).paint(g);
+                        new Torus(3, "resources/torus.png");
                     }
                 }
             });

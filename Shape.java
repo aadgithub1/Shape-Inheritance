@@ -30,6 +30,16 @@ public class Shape extends JFrame{
         setVisible(true);
     }
 
+    public Shape(int dimensions, JLabel shapeToAdd){
+        this.numDimensions = dimensions;
+        setPreferredSize(new Dimension(600, 600));
+        this.add(shapeToAdd);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setVisible(true);
+
+    }
+
     public void printDimension(){
         System.out.println("The number of dimensions is " + this.numDimensions);
     }
