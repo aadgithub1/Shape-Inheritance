@@ -1,10 +1,13 @@
 // Cylinder.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
-// Cylinder.java represents a cylinder.
+// Cylinder.java creates a new JFrame
+// and displays the resources/cylinder image.
 // It inherits methods and fields from Shape
-// and ThreeDimensionalShape. It has its own fields "radius"
-// and height to hold those respective values.
+// and ThreeDimensionalShape. It has its own fields
+// "radius" and "height"
+// to hold the values for the image dimensions.
+// It has two JComboBoxes to obtain its radius and height.
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -29,6 +32,11 @@ public class Cylinder extends ThreeDimensionalShape{
         frame.add(comboBoxHeight);
 
     }
+
+    //when the user creates an action by clicking
+    //the JComboBox the conditional checks the returned
+    //values; if they are set (are not 0) the cylinder is
+    //rendered with the specified dimensions
 
     public void actionPerformed(ActionEvent e){
         radius = (int)comboBoxRadius.getSelectedItem();

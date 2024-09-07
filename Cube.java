@@ -1,9 +1,12 @@
 // Cube.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
-// Cube.java represents a cube.
+// Cube.java creates a new JFrame
+// and displays the resources/cube image.
 // It inherits methods and fields from Shape
-// and ThreeDimensionalShape. It has its own field "sideLength".
+// and ThreeDimensionalShape. It has its own field "sideLength"
+// to hold the value for the image dimensions.
+// It has one JComboBox to obtain its side length.
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -22,7 +25,10 @@ public class Cube extends ThreeDimensionalShape{
         frame.add(comboBoxSideLength);
     }
 
-
+    //when the user creates an action by clicking
+    //the JComboBox the conditional checks the returned
+    //value; if it is set (is not 0) the cube is
+    //rendered with the specified dimension
     public void actionPerformed(ActionEvent e){
         sideLength = (int)comboBoxSideLength.getSelectedItem();
 
