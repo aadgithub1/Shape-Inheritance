@@ -36,7 +36,7 @@ public class Cylinder extends ThreeDimensionalShape{
 
         if (radius != 0 && height != 0){
             JFrame frame = super.makeDisplayFrame();
-            JLabel label = super.makeDisplayLabel("resources/cylinder.png", radius*2, height);
+            JLabel label = super.makeDisplayLabel("resources/cylinder.png", (radius+10)*2, height);
             frame.add(label);;
         }
     }

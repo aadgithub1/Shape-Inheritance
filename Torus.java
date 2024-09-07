@@ -35,7 +35,7 @@ public class Torus extends ThreeDimensionalShape{
         crossRadius = (int)comboBoxCross.getSelectedItem();
         if (majorRadius != 0 && crossRadius != 0){
             JFrame frame = super.makeDisplayFrame();
-            JLabel label = super.makeDisplayLabel("resources/torus.png", majorRadius, crossRadius);
+            JLabel label = super.makeDisplayLabel("resources/thin-torus.png", majorRadius+10, crossRadius+10);
             frame.add(label);
         }
     }

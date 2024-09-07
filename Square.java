@@ -26,7 +26,7 @@ public class Square extends TwoDimensionalShape{
         sideLength = (int)comboBox.getSelectedItem();
         if (sideLength != 0){
             JFrame frame = super.makeDisplayFrame();
-            JLabel label = super.makeDisplayLabel("resources/square.png", sideLength, sideLength);
+            JLabel label = super.makeDisplayLabel("resources/square.png", sideLength+10, sideLength+10);
             frame.add(label);
         }
     }

@@ -31,7 +31,7 @@ public class Triangle extends TwoDimensionalShape{
         height = (int)comboBoxHeight.getSelectedItem();
         if (base != 0 && height != 0){
             JFrame frame = super.makeDisplayFrame();
-            JLabel label = super.makeDisplayLabel("resources/triangle.png", base, height);
+            JLabel label = super.makeDisplayLabel("resources/triangle.png", base+5, height+10);
             frame.add(label);
         }
     }
