@@ -14,15 +14,17 @@ import javax.swing.*;
 public class Torus extends ThreeDimensionalShape{
     int majorRadius;
     int crossRadius;
+    Integer[] torusMajorChoices = {0, 1, 2, 3};
+    Integer[] torusCrossChoices = {0, 1};
     JComboBox<Integer> comboBoxMajor;
     JComboBox<Integer> comboBoxCross;
 
     public Torus(int dimensions) {
         super(dimensions);
 
-        frame.setTitle("Enter major radius, the cross radius");
-        comboBoxMajor = new JComboBox<Integer>(choices);
-        comboBoxCross = new JComboBox<Integer>(choices);
+        frame.setTitle("Enter major radius to cross radius ratio");
+        comboBoxMajor = new JComboBox<Integer>(torusMajorChoices);
+        comboBoxCross = new JComboBox<Integer>(torusCrossChoices);
         comboBoxMajor.addActionListener(this);
         comboBoxCross.addActionListener(this);
 
@@ -33,9 +35,17 @@ public class Torus extends ThreeDimensionalShape{
     public void actionPerformed(ActionEvent e){
         majorRadius = (int)comboBoxMajor.getSelectedItem();
         crossRadius = (int)comboBoxCross.getSelectedItem();
+        JLabel label;
         if (majorRadius != 0 && crossRadius != 0){
             JFrame frame = super.makeDisplayFrame();
-            JLabel label = super.makeDisplayLabel("resources/thin-torus.png", majorRadius+10, crossRadius+10);
+            if (majorRadius == 3 && crossRadius == 1){
+                label = super.makeDisplayLabel("resources/thin-torus.png", 150, 150);
+            } else if (majorRadius == 2 && crossRadius == 1) {
+                label = super.makeDisplayLabel("resources/reg-torus.png", 150, 150);
+            } else {
+                label = super.makeDisplayLabel("resources/fat-torus.png", 150, 150);
+            }
+
             frame.add(label);
         }
     }
