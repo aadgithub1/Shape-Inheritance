@@ -22,7 +22,7 @@ import java.awt.*;
 
 public class Shape extends JFrame implements ActionListener{
     protected int numDimensions;
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
+    Integer[] choices = {0, 25, 50, 100, 200, 300};
     JFrame frame;
 
     public Shape(int dimensions){
@@ -45,5 +45,15 @@ public class Shape extends JFrame implements ActionListener{
         frame.setSize(650, 650);
         frame.setVisible(true);
         return frame;
+    }
+
+    public JLabel makeDisplayLabel(String imagePath, int widthDimension, int heightDimension){
+        ImageIcon originalIcon = new ImageIcon(imagePath);
+
+        Image originalImage = originalIcon.getImage();
+        Image resizedImage = originalImage.getScaledInstance(widthDimension, heightDimension, Image.SCALE_SMOOTH);  // Use smooth scaling
+        ImageIcon resizedIcon = new ImageIcon(resizedImage);
+        JLabel imageLabel = new JLabel(resizedIcon);
+        return imageLabel;
     }
 }

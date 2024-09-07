@@ -5,39 +5,27 @@
 // It inherits methods and fields from Shape
 // and ThreeDimensionalShape. It has its own field "radius",
 // which holds its radius value.
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class Sphere extends ThreeDimensionalShape{
     int radius;
-
     JComboBox<Integer> comboBoxRadius;
 
     public Sphere(int dimensions) {
         super(dimensions);
-
         frame.setTitle("Enter radius");
         comboBoxRadius = new JComboBox<Integer>(choices);
         comboBoxRadius.addActionListener(this);
-
         frame.add(comboBoxRadius);
-
-
     }
 
     public void actionPerformed(ActionEvent e){
         radius = (int)comboBoxRadius.getSelectedItem();
         if (radius != 0){
-            frame = super.makeDisplayFrame();
-
-            ImageIcon originalIcon = new ImageIcon("resources/sphere.png");
-
-            Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(radius*2, radius*2, Image.SCALE_SMOOTH);  // Use smooth scaling
-            ImageIcon resizedIcon = new ImageIcon(resizedImage);
-            JLabel imageLabel = new JLabel(resizedIcon);
-            frame.add(imageLabel);
+            JFrame frame = super.makeDisplayFrame();
+            JLabel label = super.makeDisplayLabel("resources/sphere.png", radius*2, radius*2);
+            frame.add(label);
         }
     }
 }

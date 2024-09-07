@@ -6,7 +6,6 @@
 // and ThreeDimensionalShape. It has its own field "sideLength".
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class Cube extends ThreeDimensionalShape{
@@ -27,17 +26,10 @@ public class Cube extends ThreeDimensionalShape{
     public void actionPerformed(ActionEvent e){
         sideLength = (int)comboBoxSideLength.getSelectedItem();
 
-        System.out.println(sideLength);
         if (sideLength != 0){
-            frame = super.makeDisplayFrame();
-
-            ImageIcon originalIcon = new ImageIcon("resources/cube.png");
-
-            Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(sideLength, sideLength, Image.SCALE_SMOOTH);  // Use smooth scaling
-            ImageIcon resizedIcon = new ImageIcon(resizedImage);
-            JLabel imageLabel = new JLabel(resizedIcon);
-            frame.add(imageLabel);
+            JFrame frame = super.makeDisplayFrame();
+            JLabel label = super.makeDisplayLabel("resources/cube.png", sideLength, sideLength);
+            frame.add(label);
         }
     }
 }

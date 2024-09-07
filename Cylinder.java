@@ -7,7 +7,6 @@
 // and height to hold those respective values.
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class Cylinder extends ThreeDimensionalShape{
@@ -35,17 +34,10 @@ public class Cylinder extends ThreeDimensionalShape{
         radius = (int)comboBoxRadius.getSelectedItem();
         height = (int)comboBoxHeight.getSelectedItem();
 
-        System.out.println(radius);
         if (radius != 0 && height != 0){
-            frame = super.makeDisplayFrame();
-
-            ImageIcon originalIcon = new ImageIcon("resources/cylinder.png");
-
-            Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(radius*2, height, Image.SCALE_SMOOTH);  // Use smooth scaling
-            ImageIcon resizedIcon = new ImageIcon(resizedImage);
-            JLabel imageLabel = new JLabel(resizedIcon);
-            frame.add(imageLabel);
+            JFrame frame = super.makeDisplayFrame();
+            JLabel label = super.makeDisplayLabel("resources/cylinder.png", radius*2, height);
+            frame.add(label);;
         }
     }
 }

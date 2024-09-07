@@ -5,20 +5,17 @@
 // It inherits methods and fields from Shape
 // and TwoDimensionalShape. It has its own fields "base"
 // and "height" to hold those respective values.
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class Triangle extends TwoDimensionalShape{
     int base;
     int height;
-
     JComboBox<Integer> comboBoxBase;
     JComboBox<Integer> comboBoxHeight;
 
     public Triangle(int dimensions) {
         super(dimensions);
-
         frame.setTitle("Enter base, then height");
         comboBoxBase = new JComboBox<Integer>(choices);
         comboBoxHeight = new JComboBox<Integer>(choices);
@@ -27,22 +24,15 @@ public class Triangle extends TwoDimensionalShape{
 
         frame.add(comboBoxBase);
         frame.add(comboBoxHeight);
-
     }
 
     public void actionPerformed(ActionEvent e){
         base = (int)comboBoxBase.getSelectedItem();
         height = (int)comboBoxHeight.getSelectedItem();
         if (base != 0 && height != 0){
-            frame = super.makeDisplayFrame();
-
-            ImageIcon originalIcon = new ImageIcon("resources/triangle.png");
-
-            Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(base, height, Image.SCALE_SMOOTH);  // Use smooth scaling
-            ImageIcon resizedIcon = new ImageIcon(resizedImage);
-            JLabel imageLabel = new JLabel(resizedIcon);
-            frame.add(imageLabel);
+            JFrame frame = super.makeDisplayFrame();
+            JLabel label = super.makeDisplayLabel("resources/triangle.png", base, height);
+            frame.add(label);
         }
     }
 }

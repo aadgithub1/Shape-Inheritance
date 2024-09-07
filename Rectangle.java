@@ -5,7 +5,6 @@
 // It inherits methods and fields from Shape
 // and TwoDimensionalShape. It has its own fields "length"
 // and "width" to hold those respective values.
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -25,7 +24,7 @@ public class Rectangle extends TwoDimensionalShape{
         comboBoxLength = new JComboBox<Integer>(choices);
         comboBoxWidth.addActionListener(this);
         comboBoxLength.addActionListener(this);
-
+        
         frame.add(comboBoxWidth);
         frame.add(comboBoxLength);
     }
@@ -33,17 +32,10 @@ public class Rectangle extends TwoDimensionalShape{
         width = (int)comboBoxWidth.getSelectedItem();
         length = (int)comboBoxLength.getSelectedItem();
 
-        System.out.println(length + " " + width);
         if (width != 0 && length != 0){
-            frame = super.makeDisplayFrame();
-
-            ImageIcon originalIcon = new ImageIcon("resources/rectangle.png");
-
-            Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(width, length, Image.SCALE_SMOOTH);  // Use smooth scaling
-            ImageIcon resizedIcon = new ImageIcon(resizedImage);
-            JLabel imageLabel = new JLabel(resizedIcon);
-            frame.add(imageLabel);
+            JFrame frame = super.makeDisplayFrame();
+            JLabel label = super.makeDisplayLabel("resources/rectangle.png", width, length);
+            frame.add(label);
         }
     }
 }

@@ -6,13 +6,9 @@
 // and ThreeDimensionalShape. It has its own fields "radius"
 // and height to hold those respective values.
 
-import javax.swing.ImageIcon;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 
-import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 
 public class Cone extends ThreeDimensionalShape{
@@ -40,17 +36,10 @@ public class Cone extends ThreeDimensionalShape{
         radius = (int)comboBoxRadius.getSelectedItem();
         height = (int)comboBoxHeight.getSelectedItem();
 
-        System.out.println(radius);
         if (radius != 0 && height != 0){
-            frame = super.makeDisplayFrame();
-
-            ImageIcon originalIcon = new ImageIcon("resources/cone.png");
-
-            Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(radius*2, height, Image.SCALE_SMOOTH);  // Use smooth scaling
-            ImageIcon resizedIcon = new ImageIcon(resizedImage);
-            JLabel imageLabel = new JLabel(resizedIcon);
-            frame.add(imageLabel);
+            JFrame frame = super.makeDisplayFrame();
+            JLabel label = super.makeDisplayLabel("resources/cone.png", radius*2, height);
+            frame.add(label);
 
         }
     }

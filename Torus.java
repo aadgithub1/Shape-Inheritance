@@ -5,7 +5,6 @@
 // It inherits methods and fields from Shape
 // and ThreeDimensionalShape. It has its own fields "majorRadius",
 // and "crossRadius" which hold those respective values.
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -15,7 +14,6 @@ import javax.swing.*;
 public class Torus extends ThreeDimensionalShape{
     int majorRadius;
     int crossRadius;
-
     JComboBox<Integer> comboBoxMajor;
     JComboBox<Integer> comboBoxCross;
 
@@ -30,23 +28,15 @@ public class Torus extends ThreeDimensionalShape{
 
         frame.add(comboBoxMajor);
         frame.add(comboBoxCross);
-
-
     }
 
     public void actionPerformed(ActionEvent e){
         majorRadius = (int)comboBoxMajor.getSelectedItem();
         crossRadius = (int)comboBoxCross.getSelectedItem();
         if (majorRadius != 0 && crossRadius != 0){
-            frame = super.makeDisplayFrame();
-
-            ImageIcon originalIcon = new ImageIcon("resources/torus.png");
-
-            Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(majorRadius, crossRadius, Image.SCALE_SMOOTH);  // Use smooth scaling
-            ImageIcon resizedIcon = new ImageIcon(resizedImage);
-            JLabel imageLabel = new JLabel(resizedIcon);
-            frame.add(imageLabel);
+            JFrame frame = super.makeDisplayFrame();
+            JLabel label = super.makeDisplayLabel("resources/torus.png", majorRadius, crossRadius);
+            frame.add(label);
         }
     }
 }
