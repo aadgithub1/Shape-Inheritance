@@ -14,32 +14,25 @@
 // information about them. This method also formats output
 // to be rounded to 2 decimal places.
 
-import java.awt.Dimension;
-import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Shape extends JFrame implements ActionListener{
     protected int numDimensions;
-    Graphics g;
+    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
+    JFrame frame;
 
     public Shape(int dimensions){
-        this.numDimensions = dimensions;
-        setPreferredSize(new Dimension(600, 600));
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pack();
-        setVisible(true);
-    }
+        numDimensions = dimensions;
 
-    public Shape(int dimensions, JLabel shapeToAdd){
-        this.numDimensions = dimensions;
-        setPreferredSize(new Dimension(600, 600));
-        this.add(shapeToAdd);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pack();
-        setVisible(true);
+        frame = new JFrame();
+        frame.setLayout(new FlowLayout());
+        frame.setSize(new Dimension(400, 400));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 
     @Override

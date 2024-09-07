@@ -13,25 +13,21 @@ public class Triangle extends TwoDimensionalShape{
     int base;
     int height;
 
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBoxBase;
     JComboBox<Integer> comboBoxHeight;
-    JFrame frame;
+
     public Triangle(int dimensions) {
         super(dimensions);
 
-        frame = new JFrame("Enter base, then height");
-        frame.setLayout(new FlowLayout());
+        frame.setTitle("Enter base, then height");
         comboBoxBase = new JComboBox<Integer>(choices);
         comboBoxHeight = new JComboBox<Integer>(choices);
         comboBoxBase.addActionListener(this);
         comboBoxHeight.addActionListener(this);
 
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxBase);
         frame.add(comboBoxHeight);
-        frame.setVisible(true);
+
     }
 
     public void actionPerformed(ActionEvent e){

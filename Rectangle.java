@@ -14,25 +14,20 @@ public class Rectangle extends TwoDimensionalShape{
     int length;
     int width;
 
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBoxWidth;
     JComboBox<Integer> comboBoxLength;
-    JFrame frame;
+
     public Rectangle(int dimensions){
         super(dimensions);
 
-        frame = new JFrame("Enter width, then height");
-        frame.setLayout(new FlowLayout());
+        frame.setTitle("Enter width, then height");
         comboBoxWidth = new JComboBox<Integer>(choices);
         comboBoxLength = new JComboBox<Integer>(choices);
         comboBoxWidth.addActionListener(this);
         comboBoxLength.addActionListener(this);
 
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxWidth);
         frame.add(comboBoxLength);
-        frame.setVisible(true);
     }
     public void actionPerformed(ActionEvent e){
         width = (int)comboBoxWidth.getSelectedItem();

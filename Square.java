@@ -12,21 +12,17 @@ import javax.swing.*;
 public class Square extends TwoDimensionalShape{
     int sideLength;
 
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBox;
-    JFrame frame;
+
     public Square(int dimensions) {
         super(dimensions);
 
-        frame = new JFrame("Enter side length");
-        frame.setLayout(new FlowLayout());
+        frame.setTitle("Enter side length");
         comboBox = new JComboBox<Integer>(choices);
         comboBox.addActionListener(this);
 
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBox);
-        frame.setVisible(true);
+
     }
 
     public void actionPerformed(ActionEvent e){

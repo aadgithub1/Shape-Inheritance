@@ -16,26 +16,21 @@ public class Torus extends ThreeDimensionalShape{
     int majorRadius;
     int crossRadius;
 
-
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBoxMajor;
     JComboBox<Integer> comboBoxCross;
-    JFrame frame;
+
     public Torus(int dimensions) {
         super(dimensions);
 
-        frame = new JFrame("Enter major radius, then cross radius");
-        frame.setLayout(new FlowLayout());
+        frame.setTitle("Enter major radius, the cross radius");
         comboBoxMajor = new JComboBox<Integer>(choices);
         comboBoxCross = new JComboBox<Integer>(choices);
         comboBoxMajor.addActionListener(this);
         comboBoxCross.addActionListener(this);
 
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxMajor);
         frame.add(comboBoxCross);
-        frame.setVisible(true);
+
 
     }
 

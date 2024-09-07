@@ -12,21 +12,17 @@ import javax.swing.*;
 public class Sphere extends ThreeDimensionalShape{
     int radius;
 
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBoxRadius;
-    JFrame frame;
+
     public Sphere(int dimensions) {
         super(dimensions);
 
-        frame = new JFrame("Enter radius");
-        frame.setLayout(new FlowLayout());
+        frame.setTitle("Enter radius");
         comboBoxRadius = new JComboBox<Integer>(choices);
         comboBoxRadius.addActionListener(this);
 
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxRadius);
-        frame.setVisible(true);
+
 
     }
 

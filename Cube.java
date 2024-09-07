@@ -11,24 +11,16 @@ import java.awt.event.*;
 
 public class Cube extends ThreeDimensionalShape{
     int  sideLength;
-
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBoxSideLength;
-    JFrame frame;
 
     public Cube(int dimensions) {
         super(dimensions);
-        frame = new JFrame("Enter side length");
-        frame.setLayout(new FlowLayout());
-        comboBoxSideLength = new JComboBox<Integer>(choices);
 
+        frame.setTitle("Enter side length");
+        comboBoxSideLength = new JComboBox<Integer>(choices);
         comboBoxSideLength.addActionListener(this);
 
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxSideLength);
-        frame.setVisible(true);
-
     }
 
 

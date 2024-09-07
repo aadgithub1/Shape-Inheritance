@@ -14,26 +14,21 @@ public class Cylinder extends ThreeDimensionalShape{
     int radius;
     int height;
 
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBoxRadius;
     JComboBox<Integer> comboBoxHeight;
-    JFrame frame;
 
     public Cylinder(int dimensions) {
         super(dimensions);
-        frame = new JFrame("Enter radius, then height");
-        frame.setLayout(new FlowLayout());
+
+        frame.setTitle("Enter radius, then height");
         comboBoxRadius = new JComboBox<Integer>(choices);
         comboBoxHeight = new JComboBox<Integer>(choices);
 
         comboBoxRadius.addActionListener(this);
         comboBoxHeight.addActionListener(this);
-
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxRadius);
         frame.add(comboBoxHeight);
-        frame.setVisible(true);
+
     }
 
     public void actionPerformed(ActionEvent e){

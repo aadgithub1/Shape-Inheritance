@@ -17,21 +17,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 public class Circle extends TwoDimensionalShape{
     private int radius;
-    Integer[] choices = {0, 25, 50, 100, 150, 200, 300};
     JComboBox<Integer> comboBox;
-    JFrame frame;
+    
 
     public Circle(int dimensions) {
         super(dimensions);
-        frame = new JFrame("Enter radius");
-        frame.setLayout(new FlowLayout());
+        frame.setTitle("Enter radius");
         comboBox = new JComboBox<Integer>(choices);
         comboBox.addActionListener(this);
-
-        frame.setSize(new Dimension(400, 400));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBox);
-        frame.setVisible(true);
+        
 
     }
 
