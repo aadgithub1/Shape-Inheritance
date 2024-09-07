@@ -22,11 +22,6 @@ public class MenuPanel extends JPanel{
         setSize(new Dimension(600, 600));
         setLayout(new GridLayout(3,3));
 
-        //TO-DO:
-        // Fix double Frame pop-up
-        // Allow user input (or dropdown) for dimensions
-        // Render new JFrame using the shape classes
-
 
         for (ShapePanel panel : shapePanels){
             add(panel);

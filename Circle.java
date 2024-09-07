@@ -1,10 +1,12 @@
 // Circle.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
-// Circle.java represents a circle.
+// Circle.java creates a new JFrame
+// and displays the resources/circle image.
 // It inherits methods and fields from Shape
 // and TwoDimensionalShape. It has its own field "radius"
-// to hold its radius value.
+// to hold its radius value for the image dimensions.
+// It has one JComboBox to obtain its radius value.
 
 import java.awt.event.ActionEvent;
 
@@ -21,7 +23,8 @@ public class Circle extends TwoDimensionalShape{
         comboBox.addActionListener(this);
         frame.add(comboBox);
     }
-
+    //if JComboBox is assigned, a JFrame is created
+    //to display the circle image
     public void actionPerformed(ActionEvent e){
         radius = (int)comboBox.getSelectedItem();
         if (radius != 0){
