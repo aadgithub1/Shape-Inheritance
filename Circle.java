@@ -24,10 +24,11 @@ public class Circle extends TwoDimensionalShape{
     public Circle(int dimensions) {
         super(dimensions);
         frame = new JFrame("Enter radius");
+        frame.setLayout(new FlowLayout());
         comboBox = new JComboBox<Integer>(choices);
         comboBox.addActionListener(this);
 
-        frame.setSize(new Dimension(200, 200));
+        frame.setSize(new Dimension(400, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBox);
         frame.setVisible(true);
@@ -45,7 +46,7 @@ public class Circle extends TwoDimensionalShape{
             ImageIcon originalIcon = new ImageIcon("resources/circle.png");
 
             Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(radius, radius, Image.SCALE_SMOOTH);  // Use smooth scaling
+            Image resizedImage = originalImage.getScaledInstance(radius*2, radius*2, Image.SCALE_SMOOTH);  // Use smooth scaling
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);

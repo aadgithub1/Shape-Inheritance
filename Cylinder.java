@@ -21,7 +21,7 @@ public class Cylinder extends ThreeDimensionalShape{
 
     public Cylinder(int dimensions) {
         super(dimensions);
-        frame = new JFrame("Enter radius and height");
+        frame = new JFrame("Enter radius, then height");
         frame.setLayout(new FlowLayout());
         comboBoxRadius = new JComboBox<Integer>(choices);
         comboBoxHeight = new JComboBox<Integer>(choices);
@@ -29,7 +29,7 @@ public class Cylinder extends ThreeDimensionalShape{
         comboBoxRadius.addActionListener(this);
         comboBoxHeight.addActionListener(this);
 
-        frame.setSize(new Dimension(200, 200));
+        frame.setSize(new Dimension(400, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxRadius);
         frame.add(comboBoxHeight);
@@ -49,7 +49,7 @@ public class Cylinder extends ThreeDimensionalShape{
             ImageIcon originalIcon = new ImageIcon("resources/cylinder.png");
 
             Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(radius, height, Image.SCALE_SMOOTH);  // Use smooth scaling
+            Image resizedImage = originalImage.getScaledInstance(radius*2, height, Image.SCALE_SMOOTH);  // Use smooth scaling
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);

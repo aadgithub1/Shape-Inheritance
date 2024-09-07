@@ -35,7 +35,7 @@ public class Cone extends ThreeDimensionalShape{
         comboBoxRadius.addActionListener(this);
         comboBoxHeight.addActionListener(this);
 
-        frame.setSize(new Dimension(200, 200));
+        frame.setSize(new Dimension(400, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxRadius);
         frame.add(comboBoxHeight);
@@ -56,7 +56,7 @@ public class Cone extends ThreeDimensionalShape{
             ImageIcon originalIcon = new ImageIcon("resources/cone.png");
 
             Image originalImage = originalIcon.getImage();
-            Image resizedImage = originalImage.getScaledInstance(radius, height, Image.SCALE_SMOOTH);  // Use smooth scaling
+            Image resizedImage = originalImage.getScaledInstance(radius*2, height, Image.SCALE_SMOOTH);  // Use smooth scaling
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);

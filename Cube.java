@@ -18,13 +18,13 @@ public class Cube extends ThreeDimensionalShape{
 
     public Cube(int dimensions) {
         super(dimensions);
-        frame = new JFrame("Enter radius and height");
+        frame = new JFrame("Enter side length");
         frame.setLayout(new FlowLayout());
         comboBoxSideLength = new JComboBox<Integer>(choices);
 
         comboBoxSideLength.addActionListener(this);
 
-        frame.setSize(new Dimension(200, 200));
+        frame.setSize(new Dimension(400, 400));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(comboBoxSideLength);
         frame.setVisible(true);
