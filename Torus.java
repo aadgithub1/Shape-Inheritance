@@ -38,9 +38,7 @@ public class Torus extends ThreeDimensionalShape{
         majorRadius = (int)comboBoxMajor.getSelectedItem();
         crossRadius = (int)comboBoxCross.getSelectedItem();
         if (majorRadius != 0 && crossRadius != 0){
-            JFrame frame = new JFrame("ImageIcon Resize Example");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(650, 650);
+            frame = super.makeDisplayFrame();
 
             ImageIcon originalIcon = new ImageIcon("resources/torus.png");
 
@@ -49,7 +47,6 @@ public class Torus extends ThreeDimensionalShape{
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);
-            frame.setVisible(true);
         }
     }
 }

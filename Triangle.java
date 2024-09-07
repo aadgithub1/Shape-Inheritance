@@ -34,9 +34,7 @@ public class Triangle extends TwoDimensionalShape{
         base = (int)comboBoxBase.getSelectedItem();
         height = (int)comboBoxHeight.getSelectedItem();
         if (base != 0 && height != 0){
-            JFrame frame = new JFrame("ImageIcon Resize Example");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(650, 650);
+            frame = super.makeDisplayFrame();
 
             ImageIcon originalIcon = new ImageIcon("resources/triangle.png");
 
@@ -45,7 +43,6 @@ public class Triangle extends TwoDimensionalShape{
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);
-            frame.setVisible(true);
         }
     }
 }

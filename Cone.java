@@ -42,9 +42,7 @@ public class Cone extends ThreeDimensionalShape{
 
         System.out.println(radius);
         if (radius != 0 && height != 0){
-            JFrame frame = new JFrame("ImageIcon Resize Example");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(650, 650);
+            frame = super.makeDisplayFrame();
 
             ImageIcon originalIcon = new ImageIcon("resources/cone.png");
 
@@ -53,7 +51,7 @@ public class Cone extends ThreeDimensionalShape{
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);
-            frame.setVisible(true);
+
         }
     }
 }

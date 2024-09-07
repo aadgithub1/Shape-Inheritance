@@ -29,9 +29,7 @@ public class Cube extends ThreeDimensionalShape{
 
         System.out.println(sideLength);
         if (sideLength != 0){
-            JFrame frame = new JFrame("ImageIcon Resize Example");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(650, 650);
+            frame = super.makeDisplayFrame();
 
             ImageIcon originalIcon = new ImageIcon("resources/cube.png");
 
@@ -40,7 +38,6 @@ public class Cube extends ThreeDimensionalShape{
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);
-            frame.setVisible(true);
         }
     }
 }

@@ -38,4 +38,12 @@ public class Shape extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
     }
+
+    public JFrame makeDisplayFrame(){
+        JFrame frame = new JFrame("ImageIcon Resize Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(650, 650);
+        frame.setVisible(true);
+        return frame;
+    }
 }

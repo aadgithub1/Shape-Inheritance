@@ -29,9 +29,7 @@ public class Sphere extends ThreeDimensionalShape{
     public void actionPerformed(ActionEvent e){
         radius = (int)comboBoxRadius.getSelectedItem();
         if (radius != 0){
-            JFrame frame = new JFrame("ImageIcon Resize Example");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(650, 650);
+            frame = super.makeDisplayFrame();
 
             ImageIcon originalIcon = new ImageIcon("resources/sphere.png");
 
@@ -40,7 +38,6 @@ public class Sphere extends ThreeDimensionalShape{
             ImageIcon resizedIcon = new ImageIcon(resizedImage);
             JLabel imageLabel = new JLabel(resizedIcon);
             frame.add(imageLabel);
-            frame.setVisible(true);
         }
     }
 }
