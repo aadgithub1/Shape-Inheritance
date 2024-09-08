@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class Cube extends ThreeDimensionalShape{
-    int  sideLength;
+    int sideLength;
     JComboBox<Integer> comboBoxSideLength;
 
     public Cube(int dimensions) {
