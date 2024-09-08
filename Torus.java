@@ -1,15 +1,17 @@
 // Torus.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
 // Torus.java represents a torus.
 // It inherits methods and fields from Shape
 // and ThreeDimensionalShape. It has its own fields "majorRadius",
 // and "crossRadius" which hold those respective values.
+// It has Integer arrays to hold the possible values of
+// representative ratio of the major exis radius
+// versus the cross axis radius. Depending on the ratio,
+// a representative torus is displayed. 
+
 import java.awt.event.*;
 import javax.swing.*;
-
-
-//HOW TF DO I FIX THE RENDER ON THIS BADDIE
 
 public class Torus extends ThreeDimensionalShape{
     int majorRadius;

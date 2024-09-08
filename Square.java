@@ -1,10 +1,14 @@
 // Square.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
-// Square.java represents a square.
+// Square.java uses an inherited JFrame
+// and creates a new JFrame
+// and displays the resources/square image.
 // It inherits methods and fields from Shape
 // and TwoDimensionalShape. It has its own field "sideLength"
-// to hold its side length value.
+// to hold its side length value for the image dimensions.
+// It has one JComboBox to obtain its side length value.
+
 import java.awt.event.*;
 import javax.swing.*;
 

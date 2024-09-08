@@ -1,10 +1,14 @@
 // Sphere.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
-// Sphere.java represents a sphere.
+// Sphere.java uses an inherited JFrame
+// and instantiates another JFrame
+// and displays the resources/sphere image.
 // It inherits methods and fields from Shape
-// and ThreeDimensionalShape. It has its own field "radius",
-// which holds its radius value.
+// and ThreeDimensionalShape. It has its own field "radius"
+// to hold its radius value for the image dimensions.
+// It has one JComboBox to obtain its radius value.
+
 import java.awt.event.*;
 import javax.swing.*;
 

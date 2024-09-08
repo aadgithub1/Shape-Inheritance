@@ -1,10 +1,16 @@
 // Triangle.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
-// Triangle.java represents a triangle.
+// Triangle.java uses an inherited JFrame
+// and creates a new JFrame
+// and displays the resources/triangle image.
 // It inherits methods and fields from Shape
 // and TwoDimensionalShape. It has its own fields "base"
-// and "height" to hold those respective values.
+// and "height" to hold those respective
+// values for the image dimensions.
+// It has two JComboBoxes to obtain its base value
+// and height value.
+
 import java.awt.event.*;
 import javax.swing.*;
 

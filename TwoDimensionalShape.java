@@ -1,11 +1,8 @@
 // TwoDimensionalShape.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
-// TwoDimensionalShape.java represents a 2D shape.
-// It inherits methods and fields from Shape.
-// It has its own field "area"
-// to hold the area of any two dimensional shape.
-
+// TwoDimensionalShape.java represents a 2D shape
+// and has a field area to hold the area of a 2D shape.
 
 public class TwoDimensionalShape extends Shape{
     protected double area;
