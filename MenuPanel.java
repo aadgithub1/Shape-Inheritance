@@ -1,3 +1,13 @@
+// Main.java
+// Sep 7 2024
+// Aaron D. Webb
+// MenuPanel adds ShapePanel objects
+// to itself (an extension of JPanel) from
+// an array of ShapePanels.
+// The ShapePanels are added and
+// have MouseListeners added to them
+// using a for loop. 
+
 import javax.swing.*;
 
 import java.awt.*;
@@ -5,7 +15,6 @@ import java.awt.event.*;
 
 public class MenuPanel extends JPanel{
     String shapeToDraw;
-    Graphics2D g;
     ShapePanel[] shapePanels = {
         new CirclePanel("Circle", "resources/circle.png"),
         new RectanglePanel("Rectangle", "resources/rectangle.png"),
@@ -34,11 +43,11 @@ public class MenuPanel extends JPanel{
                     if (panel.shapeName == "Circle"){
                         new Circle(2);
                     } else if (panel.shapeName == "Rectangle"){
-                        new Rectangle(2).paint(g);
+                        new Rectangle(2);
                     } else if (panel.shapeName == "Square"){
-                        new Square(2).paint(g);
+                        new Square(2);
                     } else if (panel.shapeName == "Triangle"){
-                        new Triangle(2).paint(g);
+                        new Triangle(2);
                     } else if (panel.shapeName == "Cone"){
                         new Cone(3);
                     } else if (panel.shapeName == "Cube"){

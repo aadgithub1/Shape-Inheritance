@@ -1,5 +1,5 @@
 // Rectangle.java
-// Aug 23 2024
+// Sep 7 2024
 // Aaron D. Webb
 // Rectangle.java represents a rectangle.
 // It inherits methods and fields from Shape
@@ -24,7 +24,7 @@ public class Rectangle extends TwoDimensionalShape{
         comboBoxLength = new JComboBox<Integer>(choices);
         comboBoxWidth.addActionListener(this);
         comboBoxLength.addActionListener(this);
-        
+
         frame.add(comboBoxWidth);
         frame.add(comboBoxLength);
     }

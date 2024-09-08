@@ -1,3 +1,12 @@
+// ShapePanel.java
+// Sep 7 2024
+// Aaron D. Webb
+// ShapePanel.java has multiple variables
+// that are used to create an ImageIcon
+// and add that ImageIcon to a JLabel along
+// with descriptive text. Instances of the ShapePanels
+// are added to the MenuPanel.
+
 import javax.swing.*;
 import java.awt.*;
 

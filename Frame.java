@@ -1,22 +1,14 @@
-// ConePanel.java
+// Frame.java
 // Sep 7 2024
 // Aaron D. Webb
-
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+// Extends JFrame. Used to display
+// MenuPanel.
 
 import javax.swing.JFrame;
 
 public class Frame extends JFrame{
     MenuPanel menu = new MenuPanel();
     public Frame(){
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e){
-                System.out.println(menu.shapeToDraw);
-            }
-        });
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(menu);
         pack();
